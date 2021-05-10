@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+
+			<div id="app">		
+				<img src="img/donghua.jpeg" @click="show()" name="" id="" value=" ">
+				<!-- <input type="button" @click="show()" name="" id="" value="确定" /> -->
+				{{userNumber}}
+			</div>
+			<script type="text/javascript">
+				let v=new Vue({
+					el:'#app',
+					data:{
+						userNumber:0,
+					},
+					methods:{
+						show(){
+							console.log(event.clientX+","+event.clientY);
+							
+							if(event.clientX>51 && event.clientX<83 && event.clientY>140 && event.clientY<190
+							||(event.clientX>299 && event.clientX<325 && event.clientY>154 && event.clientY<183)
+							||(event.clientX>156 && event.clientX<194 && event.clientY>397 && event.clientY<425)
+							||(event.clientX>179 && event.clientX<238 && event.clientY>16 && event.clientY<52)
+							){
+								alert("太棒啦！找到啦！");
+							
+								v.userNumber++;
+								 if(v.userNumber==4){
+									alert("恭喜您，已全部找到,游戏通过！得分:"+v.userNumber);
+								}
+								}
+							
+						}
+						
+							
+					}
+				})
+			</script>
+			
+			
+			
+	</body>
+</html>
