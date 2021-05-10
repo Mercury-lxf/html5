@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+
+			<div id="app">		
+			<input type="text" @keydown="show()" name="" id="" value="确定" /> 
+			</div>
+			<div id="app1">	
+			<input type="text" @keypress="show1()" name="" id="" value="确定1" />
+			</div>
+			<div id="app2">	
+			<input type="text" @keyup="show2()" name="" id="" value="确定2" /> 
+			</div>
+			<script type="text/javascript">
+				let v=new Vue({
+					el:'#app',
+					data:{
+					},
+					methods:{
+						show(){
+							alert("已经触发键盘事件了")
+						}
+					}
+				})
+				
+				let v1=new Vue({
+					el:'#app1',
+					data:{
+					},
+					methods:{
+						show1(){
+							alert("已经触发键盘事件1了")
+						}
+					}
+				})
+				
+				let v2=new Vue({
+					el:'#app2',
+					data:{
+					},
+					methods:{
+						show2(){
+							alert("已经触发键盘事件2了")
+						}
+					}
+				})
+				
+			</script>
+			
+			
+			
+	</body>
+</html>

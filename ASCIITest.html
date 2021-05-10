@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Change to ASCII</title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">	
+			<h1>Change to ASCII</h1>
+			<p>请输入单个英文字母并回车</p>
+			<br>
+			<input type="text"  v-model="userKey" @keyup.enter="show()" name="" id=""/> 
+			{{userKey}}
+		<!-- 	<li v-if="userNumber==KeyNumber">恭喜你，答对了！</li> -->
+		</div>
+		
+				<script type="text/javascript">
+					let v=new Vue({
+						el:'#app',
+						data:{
+							userKey:''
+						},
+						methods:{
+							show(){
+									alert(v.userKey.charCodeAt());
+						}
+						}
+					})
+				</script>
+		
+		
+		
+		
+	</body>
+</html>
